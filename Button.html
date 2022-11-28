@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .background-color {
+        background-image:url(img/background.png);
+}
+
+
+
+ .center{
+    display: flex;
+    justify-content: center;
+}
+
+.center-img{
+margin-right: 50px;
+   
+}
+    .margin-top{
+    margin-top: 110px;
+}
+.big-margin-top{
+    margin-top: 250px;
+}
+
+    .text{
+    font-size: 75px;
+    color:rgb(255, 255, 255);
+    font-family: 'Roboto' , sans-serif;
+}
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.gone{
+    display: none;
+}
+    </style>
+    <script>
+        function btnclicked() {
+            let youlost = 'You Lost!'
+            let buttonclicked = true
+            if (buttonclicked=true) {
+                text.innerHTML=youlost
+                
+            }
+            const el = document.querySelector('#el');
+ 
+    el.classList.remove("gone");
+}
+function resetBtnClicked() {
+            let youReset = "Don't press this button"
+            let rbuttonclicked = true
+            if (rbuttonclicked=true) {
+                text.innerHTML=youReset
+                
+            }
+            const el = document.querySelector('#el');
+ 
+    el.classList.add("gone");
+}
+
+  
+
+  
+
+        
+                
+    </script>
+</head>
+<body class="background-color  ">
+    <a href="Index.html"><div >
+        <img src="img/menu.png">
+    </div>
+</a>
+    
+    <h1 class="text center "  id="text">Don't press this button</h1> 
+    <div class=" margin-top center">
+        <img id='remove' onclick="btnclicked()" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Red_button.png" >
+    </div>
+    <button   onclick="resetBtnClicked()" id= 'el' class="favorite styled gone big-margin-top" type="button">
+    Reset
+</button>
+</body>
+</html>
